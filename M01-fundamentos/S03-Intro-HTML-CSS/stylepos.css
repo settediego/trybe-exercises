@@ -10,12 +10,12 @@
   left: 80px;
 }
 
-.baloon {
-position: absolute;
-width: 150px;
-left: 290px;
-top: 100px;
-z-index: 1;
+.baloon { 
+  position: absolute;
+  width: 150px;
+  left: 290px;
+  top: 100px;
+  z-index: 1;
 }
 
 .speach {
