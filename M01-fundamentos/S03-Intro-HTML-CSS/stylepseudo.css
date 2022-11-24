@@ -4,3 +4,23 @@ div:hover {
   border-style: solid;  
 }
 
+.first {
+  background-color: red;
+}
+
+.second {
+  background-color: orange;
+}
+
+.fourth {
+  background-color: brown;
+}
+
+.fifth {
+  background-color: rgb(231, 151, 151);
+}
+
+.third {
+  font-size: 20px;
+  background-color: yellow;
+}
