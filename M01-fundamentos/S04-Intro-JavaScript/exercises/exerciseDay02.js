@@ -44,3 +44,16 @@ for (let index = 0; index < numbers.length ; index += 1) {
   }
 }
 console.log('The highest value on Array is ', higher);
+
+// Odd values on Array:
+let oddNumbers = 0
+for (let index = 0; index < numbers.length ; index += 1) {
+  if (numbers[index] % 2 != 0) {
+    oddNumbers += 1
+  }
+}
+if (oddNumbers == 0) {
+  console.log("No odd value found");
+} else {
+  console.log("The number of odd values on array is "+ oddNumbers);
+}
