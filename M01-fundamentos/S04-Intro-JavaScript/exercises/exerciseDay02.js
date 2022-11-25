@@ -22,12 +22,12 @@ for (let index = 0 ; index < numbers.length; index +=1) {
 
 console.log(sumArray);
 
-// Arithmetic Average:
+// ARITHMETIC AVERAGE:
 
 let ariAvg = sumArray/numbers.length;
 console.log('Arithmetic Average: ' + ariAvg);
 
-// Bigger, Smaller or Equal 20:
+// BIGGER, SMALLER OR EQUAL 20:
 
 if (ariAvg > 20) {
   console.log("Value bigger than 20");
@@ -35,7 +35,7 @@ if (ariAvg > 20) {
   console.log("Value smaller or equal 20");
 }
 
-// Highest value on Array:
+// HIGHEST VALUE ON ARRAY:
 
 let higher = numbers[0];
 for (let index = 0; index < numbers.length ; index += 1) {
@@ -45,7 +45,18 @@ for (let index = 0; index < numbers.length ; index += 1) {
 }
 console.log('The highest value on Array is ', higher);
 
-// Odd values on Array:
+// LOWEST NUMBER ON ARRAY:
+
+let lower = numbers[0];
+for (let index = 0; index < numbers.length ; index += 1) {
+  if (lower > numbers[index]) {
+    lower = numbers[index]
+  }
+}
+console.log('The lower value on Array is ', lower);
+
+// ODDS VALUES ON ARRAY:
+
 let oddNumbers = 0
 for (let index = 0; index < numbers.length ; index += 1) {
   if (numbers[index] % 2 != 0) {
@@ -57,3 +68,4 @@ if (oddNumbers == 0) {
 } else {
   console.log("The number of odd values on array is "+ oddNumbers);
 }
+
