@@ -6,6 +6,11 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 //   console.log(numbers[index]);
 // }
 
+// it can also be done using FOR OF:
+// for (variável OF array) {
+//
+// }
+
 
 // SUM OF ARRAY VALUES:
 
@@ -31,3 +36,11 @@ if (ariAvg > 20) {
 }
 
 // Highest value on Array:
+
+let higher = numbers[0];
+for (let index = 0; index < numbers.length ; index += 1) {
+  if (higher < numbers[index]) {
+    higher = numbers[index]
+  }
+}
+console.log('The highest value on Array is ', higher);
