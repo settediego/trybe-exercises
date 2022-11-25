@@ -22,6 +22,6 @@ for (let index=0; index < lotteryNumbers.length; index += 1) {
 
 // Estrutura for(of):
 
-for (value of lotteryNumbers) {
+for (let value of lotteryNumbers) {
   console.log(value);
 }
