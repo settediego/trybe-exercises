@@ -1,0 +1,7 @@
+ol li.impar {
+  text-transform: uppercase;
+}
+
+ol li.par {
+  color: green;
+}
