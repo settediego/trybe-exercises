@@ -93,3 +93,6 @@ console.log(primeiroMorador['andar']); // 10
 let ultimoMorador = moradores[moradores.length - 1];
 console.log(ultimoMorador); // { nome: 'Zoey', sobrenome: 'Brooks', andar: 1, apartamento: 101 }
 console.log(ultimoMorador.nome); // Zoey
+
+// CONSOLE.TABLE(OBJECTNAME)
+console.table(moradores); // Print in a table all the info inside the variable
