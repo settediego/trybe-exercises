@@ -22,3 +22,13 @@
 const sum = (num1, num2) => num1 + num2;
 
 console.log(sum(2,8));
+
+// Refatorando:
+// const generateRandomNumber = () => {
+//   return Math.floor(Math.random()*100);
+// }
+
+// Refatorando mais:
+const generateRandomNumber = () => Math.floor(Math.random() * 100);
+
+console.log(generateRandomNumber());
