@@ -1,4 +1,4 @@
-
+// Create a function to print the index of the biggest number of an array:
 
 function mIndex(array) {
   let compare = array[0];
