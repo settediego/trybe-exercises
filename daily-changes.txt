@@ -10,3 +10,6 @@ Just arrived from my work as waiter and I had a lecture about the first Trybe pr
 Finishing now, 5 hours later. I learned a lot of things about box model, positioning, properties of position, sizes, priorities of objects, but I`m not really confident about the content. Tomorrow I`ll make more, and Thursday I`ll do my project.
 I read it 10min ago and it doesn`t look too difficult, I hope I`m right.
 
+Wednesday, Novermber 30:
+I spent a lot of time updating the HTML and CSS lesson and now we are on the 4th day of JavaScript. To avoid the same mistake on CSS, I've been studying JS everyday and following the lectures daily. That's a good subject and I think it is more interesting than the other content I had before.
+About what I wrote last week, the project wasn't really difficult, but it take some time make a good one and that's what I want. My project is already approved, but I need to do one of the bonus requirements. I'll make it today after the lessons.
