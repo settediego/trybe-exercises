@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <header>
+      <h2 id="page-title">Título</h2>
+      <p id="paragraph" class="paragraphs">Dê uma cor para este parágrafo!</p>
+      <h4 id="subtitle">Subtítulo</h4>
+      <p id="second-paragraph" class="paragraphs">Segundo parágrafo!</p>
+    </header>
+    <script>
+      const paragraph = document.getElementById("paragraph");
+      paragraph.style.color = "red";
+      document.getElementsByClassName('paragraphs')[0].innerText = 'This is the first paragraph';
+      document.getElementsByTagName('h4')[0].style.color = 'blue';
+    </script>
+  </body>
+</html>
+
+<!-- Exercise 1: Add the same class for both paragraphs: -->
+<!-- class = "paragraphs" -->
+
+<!-- Exercise 2: Recover the paragraphs using the function getElementByClassName in JavaScript: -->
+<!-- document.getElementsByClassName("paragraphs") -->
+
+<!-- Exercise 3: Change the style of the first one of them: -->
+<!-- document.getElementsByClassName('paragraphs')[0].innerText = 'This is the first paragraph'; -->
+
+<!-- Exercise 4: Retrieve the subtitle and change its color using the function getElementsByTagName: -->
+<!-- document.getElementsByTagName('h4')[0].style.color = 'blue'; -->
+
+
+
