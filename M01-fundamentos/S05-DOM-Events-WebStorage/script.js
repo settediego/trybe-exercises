@@ -1,15 +1,21 @@
-document.getElementsByClassName('emergency-tasks')[0].style.backgroundColor = "rgb(255 168 168)";
+const emergencyTasks = document.getElementsByClassName('emergency-tasks')[0];
+emergencyTasks.style.backgroundColor = "rgb(255 159 132)";
 
-document.getElementsByClassName('no-emergency-tasks')[0].style.backgroundColor = "rgb(255 245 66)";
+const noEmergencyTasks = document.getElementsByClassName('no-emergency-tasks')[0];
+noEmergencyTasks.style.backgroundColor = "rgb(249 219 94)";
 
-document.getElementById('header-container').style.backgroundColor = 'rgb(71 184 71)';
+const header = document.getElementById('header-container');
+header.style.backgroundColor = 'rgb(0 176 105)';
 
-document.getElementById('footer-container').style.backgroundColor = 'rgb(21 85 21)';
+const footer = document.getElementById('footer-container');
+footer.style.backgroundColor = 'rgb(0 53 51)';
 
-for (let index = 0; index < document.querySelectorAll('.emergency-tasks h3').length; index += 1) {
-document.querySelectorAll('.emergency-tasks h3')[index].style.backgroundColor = 'purple';
+const emergencyBack = document.querySelectorAll('.emergency-tasks h3');
+for (let index = 0; index < emergencyBack.length; index += 1) {
+emergencyBack[index].style.backgroundColor = 'rgb(165 0 243)';
 }
 
-for (let index = 0; index < document.querySelectorAll('.no-emergency-tasks h3').length; index += 1) {
-  document.querySelectorAll('.no-emergency-tasks h3')[index].style.backgroundColor = 'black';
+const noEmergencyBack = document.querySelectorAll('.no-emergency-tasks h3')
+for (let index = 0; index < noEmergencyBack.length; index += 1) {
+  noEmergencyBack[index].style.backgroundColor = 'rgb(35 37 37)';
 }
