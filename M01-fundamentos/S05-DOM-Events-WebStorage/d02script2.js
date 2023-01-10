@@ -15,6 +15,10 @@ const primeiroNeto = document.getElementById('primeiroFilhoDoFilho');
 const bisneto = document.createElement('section');
 bisneto.id = 'bisneto';
 primeiroNeto.appendChild(bisneto);
+// Everything in this item can be resumed in the next line, but I don't think it is a good practice:
+
+// document.getElementById('primeiroFilhoDoFilho').appendChild(document.createElement('section')).id = 'bisneto';
+
 
 // A partir desse filho criado, acesse terceiroFilho.
 const terceiroFilho = bisneto
