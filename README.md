@@ -1,7 +1,9 @@
-# live-classes
+Hi, I'm Diego Sette, student at Trybe.
 
-Making some changes on my first README during the live class to help on the learning process of how to use Git, GitHub and VSCode
+This repository is the place where I'll put all the lessons content during the Full Stack Web Developer Course.
 
-Fazendo mudanças no Readme em aula para ajudar no aprendizado e na prática com Git, GitHub e VSCode
+It includes all the exercises that I've been doing and some notes that I take watching the videos and lessons.
 
-Adding something else only to check my new version of the shell
+All content here will be organized by module, session and class day.
+
+Enjoy!
