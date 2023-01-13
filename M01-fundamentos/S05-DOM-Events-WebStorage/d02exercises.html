@@ -58,7 +58,70 @@
   <body>
     <script>
       // PUT YOUR CODE HERE:
+      // 1. Add a tag h1 with the text TrybeTrip - Agência de Viagens as child of tag body:
+      const body = document.querySelector('body');
+      const createH1 = document.createElement('h1');
+      createH1.innerHTML = 'TrybeTrip - Agência de Viagens';
+      body.appendChild(createH1);
+
+      // 2. Add a tag main with class 'main-content' as child of tag body;
+      const addMain = document.createElement('main');
+      addMain.className = 'main-content';
+      addMain.id = 'main';
+      body.appendChild(addMain);
+
+      // 3. Add a tag section with class center-content as a child of tag main create on step 2.
+      const main = document.getElementById('main');
+      const addSection = document.createElement('section');
+      addSection.className = 'center-content';
+      addSection.id = 'section1'
+      main.appendChild(addSection);
+
+      // 4. Add a tag 'p' as child of section created on step 3 and put a text inside
+      const addP = document.createElement('p');
+      const section1 = document.getElementById('section1');
+      addP.innerHTML = 'Your best trip in the world of technology';
+      section1.appendChild(addP);
+
+      // 5. Add a tag 'section' with class 'left-content' as a child of tag main created on step 2.
+      const addSectionLeft = document.createElement('section');
+      addSectionLeft.className = 'left-content';
+      addSectionLeft.id = 'section-left';
+      main.appendChild(addSectionLeft);
+
+      // 6. Add a tag 'section' with class 'right-content' as a child of tag main created on step 2.
+      const addSectionRight = document.createElement('section');
+      addSectionRight.className = 'right-content';
+      addSectionRight.id = 'section-right';
+      main.appendChild(addSectionRight);
       
+      // 7. Add an imagem with src set to the value https://picsum.photos/200 and class small-image. This element must be child of the section created on step 5.
+      const image = document.createElement('img');
+      const sectionLeft = document.getElementById('section-left');
+      image.src = 'https://picsum.photos/200';
+      sectionLeft.appendChild(image);
+
+      // 8. Add an unordered list with values from 1 to 10 in words. This list must be child of the section created on step 6
+      const addUL = document.createElement('ul');
+      const sectionRight = document.getElementById('section-right');
+      const numbersInWords = ['One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten'];
+      addUL.id = 'ulNumbersInWords'
+      sectionRight.appendChild(addUL);
+      const listInWords = document.getElementById('ulNumbersInWords')
+      
+      for (let index = 0; index < numbersInWords.length; index +=1) {
+        const createLI = document.createElement('li');
+        createLI.innerHTML = `${numbersInWords[index]}`
+        listInWords.appendChild(createLI);
+      };
+
+      // 9. Add 3 tags h3, all being children of the main created on step 2.
+      for (index = 1; index < 4; index +=1) {
+        const tagH3 = document.createElement('h3');
+        tagH3.innerHTML = `tag h3 number ${index}`;
+        main.appendChild(tagH3);
+      };
+
     </script>
   </body>
 </html>
