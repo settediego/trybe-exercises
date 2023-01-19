@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Calculadora</title>
+</head>
+<body>
+  <p>Informe dois números para realizar a soma:</p>
+  <label for='value1'>Valor 1:</label>
+  <input type='text' id='value1'>
+  <label for='value2'>Valor 2:</label>
+  <input type='text' id='value2'>
+  <button id='button'>Somar</button>
+  <p id='result'></p>
+  <script>
+    // function sum() {
+    //   const value1 = document.getElementById('value1').value;
+    //   const value2 = document.getElementById('value2').value;
+    //   const result = Number(value1) + Number(value2);
+    //   document.getElementById('result').innerHTML = `Resultado: ${result}`;
+    //   document.getElementById('value1').value = '';
+    //   document.getElementById('value2').value = '';
+    // }
+
+// 1 - Try running the application with one of the blank values. Notice that the return is not very descriptive?
+
+// 2 - Use throw new Error and the try/catch block.
+
+// 3 - Avoid functions that have too many different responsibilities.
+
+// 4 - If the user does not fill in any input, or only one input, throw an error.
+
+// 5 - If the values entered in the inputs by the user are not numbers, throw an error. You can do this check using the isNan() function.
+
+// 6 - Add the text of the errors in the paragraph with id result, so that the user knows what happened. Remember to use descriptive errors!
+
+// 7 - Use finally to clear the input values at the end of the try/catch block.
+
+    const verifyNumber = (param1, param2) => {
+      if(!param1 || !param2) {
+        throw new Error('Fill in the fields to perform the sum');
+      }
+      if(isNaN(param1) || isNaN(param2)) {
+        throw new Error('You must fill the fields with numbers');
+      }
+    }
+    const sum = () => {
+      try {
+        const value1 = document.getElementById('value1').value;
+        const value2 = document.getElementById('value2').value;
+        verifyNumber(value1, value2);
+        const result = Number(value1) + Number(value2);
+        document.getElementById('result').innerHTML = `Resultado: ${result}`;
+      } catch (error) {
+        document.getElementById('result').innerHTML = `Error: ${error.message}`;
+      } finally {
+        document.getElementById('value1').value = '';
+        document.getElementById('value2').value = '';
+      }
+    }
+    window.onload = () => {
+      const button = document.getElementById('button');
+      button.addEventListener('click', sum);
+    }
+  </script>
+</body>
+</html>
