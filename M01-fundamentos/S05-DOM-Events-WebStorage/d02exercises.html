@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // PUT YOUR CODE HERE:
+      // 1. Add a tag h1 with the text TrybeTrip - Agência de Viagens as child of tag body:
+      const body = document.querySelector('body');
+      const createH1 = document.createElement('h1');
+      createH1.innerHTML = 'TrybeTrip - Agência de Viagens';
+      body.appendChild(createH1);
+
+      // 2. Add a tag main with class 'main-content' as child of tag body;
+      const addMain = document.createElement('main');
+      addMain.className = 'main-content';
+      addMain.id = 'main';
+      body.appendChild(addMain);
+
+      // 3. Add a tag section with class center-content as a child of tag main create on step 2.
+      const main = document.getElementById('main');
+      const addSection = document.createElement('section');
+      addSection.className = 'center-content';
+      addSection.id = 'section1'
+      main.appendChild(addSection);
+
+      // 4. Add a tag 'p' as child of section created on step 3 and put a text inside
+      const addP = document.createElement('p');
+      const section1 = document.getElementById('section1');
+      addP.innerHTML = 'Your best trip in the world of technology';
+      section1.appendChild(addP);
+
+      // 5. Add a tag 'section' with class 'left-content' as a child of tag main created on step 2.
+      const addSectionLeft = document.createElement('section');
+      addSectionLeft.className = 'left-content';
+      addSectionLeft.id = 'section-left';
+      main.appendChild(addSectionLeft);
+
+      // 6. Add a tag 'section' with class 'right-content' as a child of tag main created on step 2.
+      const addSectionRight = document.createElement('section');
+      addSectionRight.className = 'right-content';
+      addSectionRight.id = 'section-right';
+      main.appendChild(addSectionRight);
+      
+      // 7. Add an imagem with src set to the value https://picsum.photos/200 and class small-image. This element must be child of the section created on step 5.
+      const image = document.createElement('img');
+      const sectionLeft = document.getElementById('section-left');
+      image.src = 'https://picsum.photos/200';
+      image.className = 'small-image';
+      sectionLeft.appendChild(image);
+
+      // 8. Add an unordered list with values from 1 to 10 in words. This list must be child of the section created on step 6
+      const addUL = document.createElement('ul');
+      const sectionRight = document.getElementById('section-right');
+      const numbersInWords = ['One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten'];
+      addUL.id = 'ulNumbersInWords'
+      sectionRight.appendChild(addUL);
+      const listInWords = document.getElementById('ulNumbersInWords')
+      
+      for (let index = 0; index < numbersInWords.length; index +=1) {
+        const createLI = document.createElement('li');
+        createLI.id = `item-${index + 1}`; // In case I want to put an id in each element of list. //
+        createLI.innerHTML = `${numbersInWords[index]}`
+        listInWords.appendChild(createLI);
+      };
+
+      // 9. Add 3 tags h3, all being children of the main created on step 2.
+      for (index = 1; index < 4; index +=1) {
+        const tagH3 = document.createElement('h3');
+        tagH3.innerHTML = `tag h3 number ${index}`;
+        tagH3.className = 'description'; // Bonus item 2 //
+        main.appendChild(tagH3);
+      };
+
+      // Bonus:
+      // 1. Add class title to created tag h1.
+      createH1.className = 'title';
+
+      // 2. Add class description to created tags h3. 
+      // Done inside item 9.
+
+      // 3. Delete the section created on step 5 (the one that has left-content as class). Use the function removeChild.
+      const sectionToBeRemoved = document.getElementsByClassName('left-content')[0];
+      main.removeChild(sectionToBeRemoved);
+
+      // 4. Centralize the section created on step 6(the one that has right-content as class). 
+      const rightSection = document.getElementsByClassName('right-content')[0];
+      rightSection.style.marginRight = 'auto';
+
+      // 5. Change the background-color of the parent element of the section created on step 3 (the one that has center-content as class). 
+      const newBGColor = document.getElementsByClassName('center-content')[0];
+      newBGColor.style.backgroundColor = 'green'
+
+      // 6. Delete the last two elements (nine and ten) of the list created on step 8. 
+      addUL.lastChild.remove();
+      addUL.lastChild.remove();
+    </script>
+  </body>
+</html>

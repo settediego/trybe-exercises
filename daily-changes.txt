@@ -18,3 +18,5 @@ Monday, January 2:
 I had vacations from the course in December and the lesson will restart on January 10th. Today, I'm getting the studies back and organizing my repositories and files on GitHub.
 I'm also making this repository public and another one with the files that I made for my second Trybe's project(Playground Functions).
 
+Friday, January 6:
+I had a busy week in my work and now I'm back to the lessons. After reviewing the content about HTML and CSS, I'm starting to learn DOM.
