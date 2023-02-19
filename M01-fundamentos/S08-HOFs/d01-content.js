@@ -57,8 +57,8 @@ const hasName = (arr, name) => {
   return arr.some((invited) => invited === name);
 };
 
-console.log(hasName(list, 'Ana'));
-console.log(hasName(list, 'Pedro'));
+console.log(hasName(list, 'Ana')); //true
+console.log(hasName(list, 'Pedro')); //false
 
 
 // --------------------- every --------------------- returns a boolean if all items respect the rule
