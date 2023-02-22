@@ -22,29 +22,13 @@ console.log(months);
 
 const product = {
   id: 1,
-  name: 'Camiseta',
+  description: 'Camiseta',
 };
 
 // adiciona a chave `price` com o valor `23`
 const newProduct = { ...product, price: 23 };
 
-console.log(newProduct); // {id: 1, name: 'Camiseta', price: '23'}
-
-// Exercise:
-
-// Faça uma lista com as suas frutas favoritas
-const specialFruit = ['Grape', 'Strawberry', 'Orange'];
-
-// Faça uma lista de complementos que você gostaria de adicionar
-const additionalItens = ['Banana', 'Mango', 'Apple'];
-
-const fruitSalad = (fruit, additional) => {
-  // Escreva sua função aqui:
-  const fruitSalad = [...fruit, ...additional];
-  return fruitSalad;
-}
-
-console.log(fruitSalad(specialFruit, additionalItens));
+console.log(newProduct); // {id: 1, description: 'Camiseta', price: '23'}
 
 
 // --------------------- rest ---------------------
@@ -58,3 +42,39 @@ const countParams = (...args) => {
 
 console.log(countParams(0, 1, 2)); // Você passou 3 parâmetros para a função.
 console.log(countParams('string', null, [1, 2, 3], { })); // Você passou 4 parâmetros para a função.
+
+
+// --------------------- object destructuring ---------------------
+
+// definindo o objeto
+const character = {
+  name: 'Luke SkyWalker',
+  age: '53',
+  description: {
+    specieName: 'Human',
+    jedi: true,
+  },
+  homeWorld: {
+    name: 'Tatooine',
+    population: '200000',
+  },
+};
+
+// desestruturando o objeto:
+const { name, age, homeWorld: { name: planetName }, description: { jedi } } = character;
+
+// imprimindo os valores:
+console.log(`Esse é o ${name}, ele tem ${age} anos, mora no planeta ${planetName} e, por incrível que possa parecer, ele ${jedi ? 'é um Jedi' : 'não é um Jedi'}.`);
+
+// Renomeando as variáveis de forma mais descritiva do que as propriedades anteriores:
+const student = {
+  a: 'Maria',
+  b: 'Turma B',
+  c: 'Matematica',
+};
+
+const { a: nome, b: classAssigned, c: subject } = student;
+
+console.log(nome); // Maria
+console.log(classAssigned); // Turma B
+console.log(subject); // Matemática
