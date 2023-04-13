@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 
 
 // Une o Componente App com a index.html
-// NÃO MODIFICAR ESSE ARQUIVO
+// NÃO MODIFICAR ESTE ARQUIVO
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
