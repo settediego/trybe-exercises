@@ -18,10 +18,10 @@ class App extends Component {
   // Como ficaria com o constructor:
   
   // constructor() {
-  //  super()          - temos que citar a função super para manter a lógica de programação de origem do componente.  
-  //    this.handleClick1 = this.handleClick1.bind(this)            
-  //    this.handleClick2 = this.handleClick2.bind(this)            
-  //    this.handleClick3 = this.handleClick3.bind(this)            
+  //   super()          - temos que citar a função super para manter a lógica de programação de origem do componente.  
+  //   this.handleClick1 = this.handleClick1.bind(this)            
+  //   this.handleClick2 = this.handleClick2.bind(this)            
+  //   this.handleClick3 = this.handleClick3.bind(this)            
   // }
   // 
   // handleClick1() {
@@ -35,15 +35,15 @@ class App extends Component {
   // }
 
   // Podemos usar da forma como eu fiz acima ou da forma como está abaixo(parte antes do render).
-  
+
   handleClick1 = () => {
-    console.log('1st btn was clicked');
+    console.log('1st btn "this"', this);
   }
   handleClick2 = () => {
-    console.log('2nd btn was clicked');
+    console.log('2nd btn "this"', this);
   }
   handleClick3 = () => {
-    console.log('3rd btn was clicked');
+    console.log('3rd btn "this"', this);
   }
   
   render() {
